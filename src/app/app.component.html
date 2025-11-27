@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>{{ title }}</h1>
+  <div class="info">
+    <h3>🔧 Testing Loader Registration Fix (GitHub Issue #4598)</h3>
+    <p><strong>Current setup:</strong></p>
+    <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
+      <li>✅ Manually registered ImageLoader (fixes Angular build optimization)</li>
+      <li>✅ Using Mapbox GL 3.16.0</li>
+      <li>✅ Simple auto-pack IconLayer (as originally intended)</li>
+      <li>✅ Zone.js event patching disabled + runOutsideAngular</li>
+    </ul>
+    <h3>Expected behavior:</h3>
+    <ul>
+      <li><span style="color: red;">●</span> Red circles = ScatterplotLayer (baseline)</li>
+      <li><span style="color: blue;">📷</span> Blue camera icons = IconLayer</li>
+    </ul>
+    <p><strong>✅ If you see camera icons, manually registering loaders FIXES the issue! 🎉</strong></p>
+    <p><strong>❌ If you only see circles, the loader fix doesn't help (try MapLibre GL instead).</strong></p>
+    <p><em>Check browser console for "Loaders registered successfully" message.</em></p>
+  </div>
+  <div id="map"></div>
+</div>
